@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MiClaroV2" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/redButton</item>
+        <item name="colorPrimaryVariant">@color/redButtonPressed</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:colorAccent">@color/blueText</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blueText</item>
+        <item name="colorSecondaryVariant">@color/blueText</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

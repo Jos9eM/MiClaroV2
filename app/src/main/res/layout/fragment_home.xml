@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--This the interface sitting behind the backdrop and shown when it is collapsed-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/redButton"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPhone"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_phone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textLine"
+            app:layout_constraintStart_toEndOf="@+id/ivPhone"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linea 881983740"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textLOB"
+            app:layout_constraintStart_toEndOf="@+id/ivPhone"
+            app:layout_constraintTop_toBottomOf="@+id/textLine"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movil Postpago" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/arrowDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_arrow_down"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPhone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--This is the backdrop's content with a BottomSheetBehaviour applied to it-->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:behavior_peekHeight="56dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <!--This is the backdrop's header with a title and icon-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@drawable/ic_list_header_background"
+            android:padding="5dp"
+            android:elevation="4dp"
+            android:focusable="true">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/black"
+                app:tabSelectedTextColor="@color/redButton"
+                app:tabIndicatorColor="@color/redButton" />
+
+        </LinearLayout>
+
+        <!--And finally this is the body of the backdrop's content. You can add here whatever you need inside a view group (LinearLayout, RelativeLayout, SwipeRefreshLayout, ConstraintLayout, etc.)-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <!--The content's body goes here-->
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

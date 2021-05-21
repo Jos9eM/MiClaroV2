@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MiClaroV2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="rut_titular">RUT Titular (sin guión)</string>
+    <string name="pass_titular">Contraseña (Clave sucursal virtual)</string>
+    <string name="title_login">Login</string>
+</resources>
