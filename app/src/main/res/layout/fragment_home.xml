@@ -97,14 +97,22 @@
         </LinearLayout>
 
         <!--And finally this is the body of the backdrop's content. You can add here whatever you need inside a view group (LinearLayout, RelativeLayout, SwipeRefreshLayout, ConstraintLayout, etc.)-->
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        <FrameLayout
             android:id="@+id/swiperefresh"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white">
 
+            <com.biorent.miclarov2.utils.SemiCircleChart
+                android:id="@+id/chart"
+                app:orientation="left"
+                app:textColor="@color/black"
+                app:backgroundColor="@color/white"
+                android:layout_width="50dp"
+                android:layout_height="100dp"/>
+
             <!--The content's body goes here-->
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </FrameLayout>
 
     </LinearLayout>
 

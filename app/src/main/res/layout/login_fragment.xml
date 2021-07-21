@@ -46,14 +46,14 @@
                 android:id="@+id/rutTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/transparent_edittext"
                 android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="8dp"
-                android:background="@drawable/transparent_edittext"
                 android:inputType="text"
                 android:maxLines="1"
-                android:textSize="14sp"
+                android:padding="16dp"
                 android:textColor="@color/white"
-                android:padding="16dp" />
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

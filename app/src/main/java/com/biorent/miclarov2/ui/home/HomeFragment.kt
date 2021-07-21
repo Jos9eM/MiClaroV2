@@ -48,13 +48,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        linesList.add(Lines("881983740", "Movil Postpago", "$20.00", R.drawable.ic_phone))
-        linesList.add(Lines("71 98243 6128", "Movil Prepago", "$10.00", R.drawable.ic_phone))
-        linesList.add(Lines("Hualpen Concepcion #56", "Telefono Fijo", "$10.00", R.drawable.ic_call))
-
-
-
-
+        binding.chart.drawChart(20f)
 
         return binding.root
     }
